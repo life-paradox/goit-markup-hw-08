@@ -1,0 +1,23 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $secondary-bg-color;
+}
+
+.page-footer__socials {
+  display: block;
+  margin-left: 70px;
+}
+
+.page-footer__subtitle {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-bg-color;
+}

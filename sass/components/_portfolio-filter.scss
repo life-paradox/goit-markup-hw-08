@@ -1,0 +1,37 @@
+.filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.filter__item {
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.filter__btn {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+
+  color: $secondary-text-color;
+  background-color: $third-bg-color;
+  cursor: pointer;
+
+  transition: box-shadow 250ms $timig-function;
+
+  &:hover,
+  &:focus {
+    color: $primary-bg-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    transition: color 250ms $timig-function;
+    transition: background-color 250ms $timig-function;
+  }
+}
