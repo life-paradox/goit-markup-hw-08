@@ -29,6 +29,7 @@
     }
 
     @include mq(desktop) {
+      margin-bottom: 0;
       margin-right: 0;
       width: 231px;
       text-align: left;
