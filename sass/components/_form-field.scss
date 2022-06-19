@@ -56,10 +56,15 @@
 .form-field__agreement-label {
   padding-left: 30px;
 
-  font-size: 14px;
-  line-height: 2;
+  font-size: 12px;
+  line-height: 1.1667;
   letter-spacing: 0.03em;
   cursor: pointer;
+
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 2;
+  }
 }
 
 .form-field__checkbox {

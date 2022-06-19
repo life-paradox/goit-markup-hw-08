@@ -5,12 +5,28 @@
   transform: translate(-50%, -50%);
   padding: 40px;
 
-  min-width: 528px;
-  min-height: 581px;
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @include mq(mobile-only) {
+    min-width: 300px;
+    min-height: 500px;
+  }
+  @include mq(mobile) {
+    min-width: 450px;
+    min-height: 500px;
+  }
+
+  @include mq(tablet) {
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @include mq(desktop) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close-btn {
@@ -39,10 +55,15 @@
   margin-bottom: 12px;
 
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .modal__form {

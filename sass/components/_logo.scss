@@ -7,22 +7,29 @@
 
   color: $accent-color;
 
-  &--in-header {
-    margin-right: 93px;
+  &__page-header {
     padding-top: 25px;
     padding-bottom: 25px;
+
+    @include mq(tablet) {
+      // margin-right: 84px;
+    }
+
+    @include mq(desktop) {
+      margin-right: 93px;
+    }
   }
-  &--in-footer {
+  &__page-footer {
     display: inline-block;
     margin-bottom: 20px;
     line-height: 1.15;
   }
 }
 
-.logo__accent--in-header {
+.logo--dark {
   color: $primary-black-color;
 }
 
-.logo__accent--in-footer {
+.logo--light {
   color: $primary-bg-color;
 }

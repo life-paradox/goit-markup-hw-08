@@ -1,49 +1,57 @@
-.clients__list {
+.clients {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
-  margin-top: 50px;
+  @include mq(mobile-only) {
+    margin: 15px -15px -15px -15px;
+  }
+
+  @include mq(tablet-only) {
+    margin: 15px -15px -15px -15px;
+  }
+
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    padding: 0;
+  }
 }
 
 .clients__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $svg-primary-color;
+  margin: 15px;
 
-  width: 170px;
-  height: 92px;
+  @include mq(desktop) {
+    width: calc((100% - 15px * 4) / 6);
+    height: 92px;
+    margin: 0;
 
-  transition: color 250ms $timig-function;
-
-  &:not(:first-child) {
-    margin-left: 30px;
+    &:not(:first-child) {
+      margin: 0 0 0 30px;
+    }
   }
 }
 
-.clients__icon {
-  fill: currentColor;
-
-  transition: fill 250ms $timig-function;
-}
-
 .clients__link {
-  padding: 13px 31px;
+  padding: 13px 51px;
 
   cursor: pointer;
   color: $svg-primary-color;
-
   border: 1px solid #afb1b8;
   border-radius: 4px;
-
-  transition: border-color 250ms $timig-function;
+  transition: border-color 250ms $timig-function, color 250ms $timig-function;
 
   &:hover,
   &:focus {
     color: $accent-color;
     border-color: $accent-color;
+  }
 
-    transition: color 250ms $timig-function;
+  @include mq(desktop) {
+    padding: 13px 32px;
   }
 }

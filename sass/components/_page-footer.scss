@@ -1,13 +1,28 @@
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
+  width: 100%;
 
   background-color: $secondary-bg-color;
 }
 
 .page-footer__socials {
   display: block;
-  margin-left: 70px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+  }
+
+  @include mq(tablet-only) {
+    display: inline-block;
+    padding-top: 5px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
 }
 
 .page-footer__subtitle {

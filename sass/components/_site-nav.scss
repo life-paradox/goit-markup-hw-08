@@ -1,10 +1,15 @@
 .site-nav {
-  display: flex;
+  display: none;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-nav__item:not(:first-child) {

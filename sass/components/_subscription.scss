@@ -1,10 +1,27 @@
 .subscription {
-  margin-left: 93px;
+  @include mq(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+  @include mq(desktop) {
+    padding-top: 12px;
+    margin-left: 93px;
+    margin-right: 0;
+  }
 }
 
 .subscription__form {
-  display: flex;
-  flex-wrap: nowrap;
+  @include mq(not-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .subscription__input {
@@ -15,14 +32,19 @@
   color: $primary-bg-color;
 
   padding: 15px 16px;
-  width: 358px;
+  margin: 0 0 20px 0;
   height: 50px;
-
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 
   background-color: transparent;
+
+  @include mq(desktop) {
+    width: 358px;
+    margin: 0;
+  }
 
   &:hover,
   &:focus {
@@ -37,7 +59,12 @@
   position: relative;
   padding: 10px 29px;
   min-width: 200px;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(desktop) {
+    margin-left: 12px;
+  }
 }
 
 .icon-send {

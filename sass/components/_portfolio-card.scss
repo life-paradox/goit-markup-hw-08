@@ -1,5 +1,6 @@
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   transition: box-shadow 250ms $timig-function;
 
@@ -8,14 +9,23 @@
   }
 }
 
+.card__thumb {
+  display: block;
+  height: 294px;
+}
+
 .card__image {
   display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .card__description {
   display: block;
   padding: 20px 24px;
   border: 1px solid $card-border-color;
+  flex-grow: 1;
 }
 
 .card__name {
@@ -48,8 +58,8 @@
   transform: translateY(100%);
 
   transition: transform 250ms $timig-function;
-
-  padding: 63px 24px;
+  padding: 77px 24px;
+  // padding: 63px 24px;
 
   font-size: 18px;
   line-height: 1.56;
