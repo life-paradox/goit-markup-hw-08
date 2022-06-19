@@ -83,6 +83,10 @@
     font-size: 34px;
     line-height: 1.176;
     color: $accent-color;
+
+    @media screen and (max-width: 380px) {
+      font-size: 24px;
+    }
   }
   &:hover,
   &:focus {
@@ -105,5 +109,9 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 12px;
   }
 }
