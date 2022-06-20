@@ -663,17 +663,11 @@ img {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-@media screen and (max-width: 1199.98px) {
-  .clients {
-    margin: -15px;
-  }
+  margin: -15px;
 }
 @media screen and (min-width: 1200px) {
   .clients {
     flex-wrap: nowrap;
-    margin-top: 50px;
-    padding: 0;
   }
 }
 
@@ -689,12 +683,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
-    width: calc((100% - 60px) / 6);
-    height: 92px;
-    margin: 0;
-  }
-  .clients__item:not(:first-child) {
-    margin: 0 0 0 30px;
+    flex-basis: calc((100% - 180px) / 6);
+    margin: 15px;
   }
 }
 
@@ -713,11 +703,6 @@ img {
 .clients__link:hover, .clients__link:focus {
   color: #2196F3;
   border-color: #2196F3;
-}
-@media screen and (min-width: 1200px) {
-  .clients__link {
-    padding: 13px 32px;
-  }
 }
 
 .page-footer {

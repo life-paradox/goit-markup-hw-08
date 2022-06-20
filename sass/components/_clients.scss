@@ -3,15 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  @include mq(not-desktop) {
-    margin: -15px;
-  }
+  margin: -15px;
 
   @include mq(desktop) {
     flex-wrap: nowrap;
-    margin-top: 50px;
-    padding: 0;
   }
 }
 
@@ -25,13 +20,12 @@
   }
 
   @include mq(desktop) {
-    width: calc((100% - 15px * 4) / 6);
-    height: 92px;
-    margin: 0;
+    flex-basis: calc((100% - 30px * 6) / 6);
+    margin: 15px;
 
-    &:not(:first-child) {
-      margin: 0 0 0 30px;
-    }
+    // &:not(:first-child) {
+    //   margin: 0 0 0 30px;
+    // }
   }
 }
 
@@ -52,9 +46,5 @@
   &:focus {
     color: $accent-color;
     border-color: $accent-color;
-  }
-
-  @include mq(desktop) {
-    padding: 13px 32px;
   }
 }
