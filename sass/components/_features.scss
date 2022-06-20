@@ -1,7 +1,6 @@
 .features {
-  margin: -15px;
-
   @include mq(tablet) {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -13,15 +12,14 @@
 }
 
 .features__item {
-  @include mq(not-desktop) {
-    margin: 15px;
-  }
-
   @include mq(mobile-only) {
-    max-width: 450px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   @include mq(tablet-only) {
+    margin: 15px;
     display: inline-block;
     width: calc((100% - 15px * 4) / 2);
   }

@@ -5,6 +5,10 @@
   width: 100%;
 
   background-color: $secondary-bg-color;
+
+  @include mq(desktop) {
+    text-align: left;
+  }
 }
 
 .page-footer__socials {

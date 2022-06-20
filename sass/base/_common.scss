@@ -71,15 +71,16 @@ img {
   }
 
   &__page-footer {
-    @include mq(tablet) {
+    @include mq(tablet-only) {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: space-around;
+      align-items: baseline;
       flex-wrap: wrap;
     }
 
     @include mq(desktop) {
       display: flex;
+      align-items: baseline;
     }
   }
 
@@ -123,7 +124,7 @@ img {
   margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -132,6 +133,8 @@ img {
 
   @include mq(desktop) {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 
   &--hidden-title {

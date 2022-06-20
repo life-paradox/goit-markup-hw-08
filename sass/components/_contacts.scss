@@ -16,16 +16,12 @@
   }
 
   &__page-footer {
-    margin-left: auto;
-    margin-right: auto;
     @include mq(mobile-only) {
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 60px;
     }
     @include mq(tablet) {
-      display: inline-block;
-      margin-left: 0;
-      margin-right: 165px;
-      margin-bottom: 60px;
     }
 
     @include mq(desktop) {
@@ -41,6 +37,12 @@
   &:not(:last-child) {
     @include mq(tablet-only) {
       margin-bottom: 10px;
+    }
+  }
+
+  &--margin-right30 {
+    @include mq(desktop) {
+      margin-right: 30px;
     }
   }
 }
@@ -65,10 +67,6 @@
   &:hover,
   &:focus {
     color: $accent-color;
-  }
-
-  &--margin-right30 {
-    margin-right: 30px;
   }
 
   &--in-footer {

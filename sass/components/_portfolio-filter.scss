@@ -1,10 +1,18 @@
 .filter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
 
   @include mq(mobile-only) {
     flex-wrap: wrap;
+  }
+
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
   }
 }
 

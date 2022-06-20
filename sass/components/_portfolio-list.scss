@@ -9,8 +9,9 @@
 }
 
 .portfolio-list__item {
-  margin-bottom: 30px;
-
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
   @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;

@@ -4,12 +4,8 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @include mq(mobile-only) {
-    margin: 15px -15px -15px -15px;
-  }
-
-  @include mq(tablet-only) {
-    margin: 15px -15px -15px -15px;
+  @include mq(not-desktop) {
+    margin: -15px;
   }
 
   @include mq(desktop) {
@@ -20,10 +16,13 @@
 }
 
 .clients__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 92px;
+  flex-basis: calc((100% - 60px) / 2);
   margin: 15px;
+
+  @include mq(tablet) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 
   @include mq(desktop) {
     width: calc((100% - 15px * 4) / 6);
@@ -37,7 +36,11 @@
 }
 
 .clients__link {
-  padding: 13px 51px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   cursor: pointer;
   color: $svg-primary-color;

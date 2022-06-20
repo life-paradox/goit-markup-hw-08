@@ -8,11 +8,12 @@
   color: $accent-color;
 
   &__page-header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     @include mq(tablet) {
-      // margin-right: 84px;
+      padding-top: 25px;
+      padding-bottom: 25px;
     }
 
     @include mq(desktop) {

@@ -1,13 +1,10 @@
 .our-team {
-  margin-top: 30px;
-
   @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
   @include mq(desktop) {
     display: flex;
-    margin-top: 50px;
   }
 }
 
@@ -17,14 +14,17 @@
   justify-content: center;
 
   max-width: 450px;
-  margin-bottom: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-bg-color;
 
-  @include mq(tablet) {
+  @include mq(mobile-only) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(tablet-only) {
     max-width: 354px;
 
     &:nth-child(2n) {
