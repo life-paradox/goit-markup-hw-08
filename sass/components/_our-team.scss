@@ -21,7 +21,9 @@
   background-color: $primary-bg-color;
 
   @include mq(mobile-only) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @include mq(tablet-only) {

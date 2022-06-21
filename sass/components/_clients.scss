@@ -22,10 +22,6 @@
   @include mq(desktop) {
     flex-basis: calc((100% - 30px * 6) / 6);
     margin: 15px;
-
-    // &:not(:first-child) {
-    //   margin: 0 0 0 30px;
-    // }
   }
 }
 
@@ -35,8 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  cursor: pointer;
   color: $svg-primary-color;
   border: 1px solid #afb1b8;
   border-radius: 4px;

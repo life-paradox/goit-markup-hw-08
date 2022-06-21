@@ -572,7 +572,7 @@ img {
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 767.98px) {
-  .our-team__item {
+  .our-team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -694,7 +694,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   color: #AFB1B8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -734,7 +733,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .page-footer__socials {
-    padding-top: 12px;
     margin-left: 70px;
   }
 }
@@ -762,13 +760,13 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .subscription {
     margin-top: 60px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
   .subscription {
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
